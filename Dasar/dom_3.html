@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Hello, World!</p>
+
+    <img src="https://bit.ly/2FKluzq" alt="Cat" id="cat-image" />
+
+    <h1 id="demo" style="color: blue;">Hello, World!</h1>
+
+    <script>
+        let demo = document.getElementById("demo");
+        console.log(demo.innerHTML); // Output: Hello, World!
+        // Ubah konten <p id="demo"> menjadi Hello, Dunia!
+        demo.innerHTML = "Hello, Dunia!";
+        console.log(demo.innerHTML); // Output: Hello, Dunia!
+
+
+        let catImage = document.getElementById("cat-image");
+        console.log(catImage.src); // Output: https://bit.ly/2FKluzq
+        console.log(catImage.alt); // Output: Cat
+        catImage.src = "https://bit.ly/3j6YdWJ";
+        catImage.alt = "Fish";
+        catImage.width = "400";
+        console.log(catImage.src); // Output: https://bit.ly/3j6YdWJ
+        console.log(catImage.alt); // Output: Fish
+        console.log(catImage.width); // Output: 400
+
+        // element.setAttribute(attribute, nilai)
+        // setAttribute itu termasuk DOM Method sedangkan element.attribute itu DOM Property.
+        let catImage = document.getElementById("cat-image");
+        catImage.setAttribute("src", "https://bit.ly/3j6YdWJ");
+        catImage.setAttribute("alt", "Fish");
+        catImage.setAttribute("width", "400");
+        console.log(catImage.src); // Output: https://bit.ly/3j6YdWJ
+        console.log(catImage.alt); // Output: Fish
+        console.log(catImage.width); // Output: 400
+
+
+        // element.style.property
+        let demo = document.getElementById("demo");
+        console.log(demo.style.color); // Output: blue
+        demo.style.color = "red";
+        demo.style.fontSize = "18px";
+        console.log(demo.style.color); // Output: red
+        console.log(demo.style.fontSize); // Output: 18px
+
+    </script>
+</body>
+</html>

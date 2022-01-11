@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="umur" value="20">
+
+    <h1 id="title">Hello, World!</h1>
+    <p>Selamat Datang di Skilvul</p>
+    <h1 class="subtitle">Mari Belajar JavaScript</h1>
+
+    <h1 class="header">Hello, World!</h1>
+    <p>Selamat Datang di Skilvul</p>
+    <span class="header">Mari Belajar JavaScript</span>
+
+
+    <h1 class="header">Hello, World!</h1>
+    <p id="header2">Selamat Datang di Skilvul</p>
+    <span class="header">Mari Belajar JavaScript</span>
+
+    <script>
+        let umur = document.getElementById("umur").value;
+        console.log(umur);
+
+        // Untuk mengakses element-element HTML berdasarkan jenis tag-nya
+        let semuaTag = document.getElementsByTagName("h1");
+        console.log(semuaTag);
+        console.log(semuaTag[0]);
+        console.log(semuaTag[1]);
+
+        // Untuk mengakses element-element HTML berdasarkan nilai attribute class-nya
+        let semuaClass = document.getElementsByClassName("header");
+        console.log(semuaClass);
+        console.log(semuaClass[0]);
+        console.log(semuaClass[1]);
+
+        // Untuk mengakses element-element HTML berdasarkan CSS Selector-nya HTML
+        let h1ClassHeader = document.querySelectorAll('h1.header');
+        console.log(h1ClassHeader);
+        console.log(h1ClassHeader[0]);
+
+        
+
+
+    </script>
+</body>
+</html>
